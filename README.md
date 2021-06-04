@@ -1,4 +1,4 @@
-# autoilumittari
+# solidautoilu
 
 
 Tämä on Pythonin Dash/Flask-kirjastoilla luotu aplikaatio, Soliabiksen kesän 2021 koodihaasteeseen.
