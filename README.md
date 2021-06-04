@@ -7,7 +7,11 @@ https://koodihaaste.solidabis.com/
 
 Koodi on tehty Windows 10 -käyttöjärjestelmässä.
 
-Sovellusta voi hyödyntää menemällä osoitteeseen:
+Sovellusta voi hyödyntää menemällä osoitteeseen: https://solidautoilu.herokuapp.com/
+
+Palvelu pyörii Herokun palvelussa hyödyntäen Apache 2-palvelinta ja gunicornia wsgi:nä.
+
+Tässä repositoriossa on myös assets-kansio, jossa pari sovelluksen hyödyntämää css-tiedostoa. Lisäksi löytyy peruskonfigurointitiedostot: gitignore, Procfile ja requirements.txt.
 
 Tämä autoilumittari-sovellus suorittaa vertailu matka-ajan ja polttoaineen kulutuksen välillä kahden eri valitun nopeuden mukaan: käyttäjä ilmoittaa saman matkustettavan etäisyyden samalla kulkuneuvotyypillä eri nopeuksilla ja sovellus laskee miten paljon nopeammin käyttäjä on perillä ja kuinka paljon enemmän polttoainetta tähän kuluu. Sovellus näyttää molemmista annetuista matkanopeuksista käytetyn ajan ja polttoaineen, sekä näiden kahden eron.
 
