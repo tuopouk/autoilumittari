@@ -21,7 +21,7 @@ server.secret_key = os.environ.get('secret_key','secret')
 app = dash.Dash(name = __name__, server = server,prevent_initial_callbacks=True)
 
 
-app.title = 'Autoilumittari'
+app.title = 'Solidautoilu'
 
 
 
@@ -71,7 +71,8 @@ def aika(etäisyys, nopeus):
 def serve_layout():
     return html.Div(children = [
         
-                        html.H1('Autoilumittari',style={'width':'88%', 'margin':20, 'textAlign': 'center'}),
+                        html.H1('Solidautoilu',style={'width':'88%', 'margin':20, 'textAlign': 'center'}),
+                        html.H2('Solidabiksen koodaushaasteeseen tehty autoilumittarisovellus',style={'width':'88%', 'margin':20, 'textAlign': 'center'}),
                         html.Br(),
                         html.P('Kesälomat lähestyvät ja monien katseet kääntyvät kohti kesämökkejä. Osalla nämä löytyvät lähempää, osalla taas matkustukseen kuluu pitkiäkin aikoja. Monesti tien päällä ollessa tuntuu siltä, että jos hieman vielä kiihdyttäisi, olisi perillä merkittävästi nopeammin… vai olisiko sittenkään? Ovatko voitetut minuutit kasvaneiden matkakustannusten arvoisia? Entä kuinka paljon matkustusajoneuvon tyyppi vaikuttaa tähän?'),
                         html.Br(),
