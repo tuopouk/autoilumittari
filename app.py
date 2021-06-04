@@ -178,7 +178,7 @@ def serve_layout():
                     html.Div(id = 'difference', className = 'row', style={'width':'88%', 'margin':20, 'textAlign': 'center'}),
                     html.Br(),
                     html.Label(['Tehnyt: Tuomas Poukkula.']),
-                    html.A('Katso projekti Githubissa', href='https://github.com/tuopouk/myfinanceai'),
+                    html.A('Katso projekti Githubissa', href='https://github.com/tuopouk/autoilumittari'),
                     html.Br(),
                     html.A('Seuraa Twitterissä', href='https://twitter.com/TuomasPoukkula'),
                     html.Br(),
