@@ -118,11 +118,11 @@ def serve_layout():
                                      html.Div(className = 'six columns',children = [
                                                  html.H2('3. Valitse ensimmäinen nopeusskenaario.'),
                                                  dcc.Slider(id = 'nopeus1',
-                                                           min = 1,
+                                                           min = 10,
                                                            max = 200,
                                                            step = 1,
                                                            value = 80,
-                                                           marks = {1:'1 km/h',
+                                                           marks = {10:'10 km/h',
                                                                    20:'20 km/h',
                                                                    50:'50 km/h',
                                                                    80:'80 km/h',
@@ -135,11 +135,11 @@ def serve_layout():
                                      html.Div(className = 'six columns',children = [
                                                  html.H2('4. Valitse toinen nopeusskenaario.'),
                                                  dcc.Slider(id = 'nopeus2',
-                                                           min = 1,
+                                                           min = 10,
                                                            max = 200,
                                                            step = 1,
                                                            value = 100,
-                                                           marks = {1:'1 km/h',
+                                                           marks = {10:'10 km/h',
                                                                    20:'20 km/h',
                                                                    50:'50 km/h',
                                                                    80:'80 km/h',
@@ -247,7 +247,7 @@ def update_speed_1_result(n_click, auto, matka, nopeus):
         html.H3('Skenaario A:'),
         html.P('Bensaa kuluisi noin {} litraa.'.format(round(consumption,2))),
         html.P('Keskikulutus olisi noin {} litraa / 100 km.'.format(round(100*consumption/matka,2))),
-        html.P('Aikaa kuluisi noin {} tuntia ja {} minuuttia.'.format(int(tunnit), int(minuutit)).replace('0 tuntia ja ', '').replace('ja 0 minuuttia', ''))
+        html.P('Aikaa kuluisi noin {} tuntia ja {} minuuttia.'.format(int(tunnit), int(minuutit)).replace('0 tuntia ja ', '').replace('ja 0 minuuttia', '').replace('noin 1 tuntia ', 'noin yksi tunti ').replace(' .','.'))
    ])
 
 
@@ -270,7 +270,7 @@ def update_speed_2_result(n_click, auto, matka, nopeus):
         html.H3('Skenaario B:'),
         html.P('Bensaa kuluisi noin {} litraa.'.format(round(consumption,2))),
         html.P('Keskikulutus olisi noin {} litraa / 100 km.'.format(round(100*consumption/matka,2))),
-        html.P('Aikaa kuluisi noin {} tuntia ja {} minuuttia.'.format(int(tunnit), int(minuutit)).replace('0 tuntia ja ', '').replace('ja 0 minuuttia', ''))
+        html.P('Aikaa kuluisi noin {} tuntia ja {} minuuttia.'.format(int(tunnit), int(minuutit)).replace('0 tuntia ja ', '').replace('ja 0 minuuttia', '').replace('noin 1 tuntia ', 'noin yksi tunti ').replace(' .','.'))
    ])
 
 
@@ -320,7 +320,7 @@ def update_difference(n_click, auto, matka, nopeus1, nopeus2):
         
         html.P({-1:'Skenaario A olisi noin {} tuntia ja {} minuuttia nopeampi.'.format(int(abs(ero_tunnit)), int(abs(-ero_min)*60)), 
                 0: 'Molemmat skenaariot olisivat suunnilleen yhtä nopeita.',
-                1:'Skenaario B olisi noin {} tuntia ja {} minuuttia nopeampi.'.format(int(abs(ero_tunnit)), int(abs(ero_min)*60))}[np.sign(aika_ero)].replace('0 tuntia ja ','').replace('ja 0 minuuttia', ''))
+                1:'Skenaario B olisi noin {} tuntia ja {} minuuttia nopeampi.'.format(int(abs(ero_tunnit)), int(abs(ero_min)*60))}[np.sign(aika_ero)].replace('0 tuntia ja ','').replace('ja 0 minuuttia ', ''))
 
    ])
 
